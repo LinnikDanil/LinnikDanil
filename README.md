@@ -1,4 +1,11 @@
-### Hi there 👋
+## Hi! 👋 I'm Danil. Java-developer.
+#### Yandex.Practicum student
+
+### Languages and Tools:
+Java, Spring Boot, Spring Framework, PostgreSQL, Maven, Junit, HTML, CSS.
+
+### Contact me:
+[![Telegram](https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Danil_Linnik) 
 
 <!--
 **LinnikDanil/LinnikDanil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
