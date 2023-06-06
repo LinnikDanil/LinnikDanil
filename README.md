@@ -2,7 +2,7 @@
 #### Yandex.Practicum student
 
 ### Languages and Tools:
-Java, Spring Boot, Spring Framework, PostgreSQL, Maven, Junit, HTML, CSS.
+Java, Spring Framework, Spring Boot, Spring Data, PostgreSQL, Maven, Junit, HTML, CSS.
 
 ### Contact me:
 [![Telegram](https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Danil_Linnik) 
