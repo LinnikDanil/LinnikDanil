@@ -1,5 +1,4 @@
 ## Hi! 👋 I'm Danil. Java-developer.
-#### Yandex.Practicum student
 
 ### Languages and Tools:
 Java, Spring Framework, Spring Boot, Spring Data, PostgreSQL, Maven, Junit, HTML, CSS.
