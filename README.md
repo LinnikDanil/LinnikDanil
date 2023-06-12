@@ -1,7 +1,7 @@
 ## Hi! 👋 I'm Danil. Java-developer.
 
 ### Languages and Tools:
-Java, Spring Boot, Spring(Data, Security, MVC) PostgreSQL, Maven, Junit, HTML, CSS.
+Java, Spring Boot, Spring(Data, Security, MVC), PostgreSQL, Maven, Junit, HTML, CSS.
 
 ### Contact me:
 [![Telegram](https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Danil_Linnik) 
