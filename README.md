@@ -28,6 +28,6 @@ I'm currently working on Java. I like Java and especially Spring.
 
 ## Contact me
 [![Telegram](https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Danil_Linnik) 
-[![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)](https://leetcode.com/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)]([https://leetcode.com/](https://leetcode.com/LinnikDanil/))
 
 ![](https://komarev.com/ghpvc/?username=LinnikDanil)
