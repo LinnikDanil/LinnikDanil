@@ -5,13 +5,13 @@ Java / Spring backend engineer. Проектирую и разрабатываю
 ## Чем я занимаюсь
 
 - Проектирую сервисные границы, API и взаимодействие между модулями и микросервисами.
-- Собираю production-oriented backend: security, observability, retries, compensation flows, logging, metrics, tracing, alerting.
+- Делаю backend-сервисы не только рабочими, но и удобными в сопровождении: с безопасностью, мониторингом, логированием и устойчивой обработкой сбоев.
 - Довожу систему до рабочего окружения: Docker, Kubernetes, Helm, инфраструктурные конфиги, локальный и стендовый запуск.
-- Работаю как с классическим synchronous REST, так и с event-driven и reactive-подходами.
+- Работаю как с классическим синхронным REST, так и с event-driven и reactive подходами.
 
 ## Основной стек
 
-- Java 21-25, Spring Boot, Spring MVC, Spring WebFlux
+- Java 25, Spring Boot 4, Spring MVC, Spring WebFlux
 - Spring Security, OAuth2/OIDC, Keycloak
 - Spring Data JPA, Hibernate, JDBC, R2DBC, PostgreSQL, Redis, Liquibase
 - Kafka, Resilience4j, OpenAPI Generator, Testcontainers
@@ -21,10 +21,10 @@ Java / Spring backend engineer. Проектирую и разрабатываю
 
 - Контрактное взаимодействие между сервисами через OpenAPI и generated clients
 - Надежные интеграции через retries, circuit breaker и явную обработку ошибок внешних сервисов
-- Компенсационные сценарии для распределенных операций: outbox, saga-like orchestration, async recovery
+- Компенсационные сценарии для распределенных операций: outbox, saga orchestration, async recovery
 - Security-first подход: разграничение прав, JWT/OAuth2, machine-to-machine интеграции, защита UI и API
 - Наблюдаемость как часть архитектуры: structured logs, tracing, business metrics, dashboards, alerts
-- Осмысленная тестовая стратегия: unit, slice, integration, security и container-based тесты
+- Осмысленная тестовая стратегия: unit, integration, security и container-based тесты
 
 ## Избранные проекты
 
@@ -34,7 +34,7 @@ Java / Spring backend engineer. Проектирую и разрабатываю
 Что внутри:
 - отдельные сервисы `account`, `cash`, `transfer`, `notification`, `front` и общая библиотека `common`;
 - OAuth2/OIDC через Keycloak для пользовательского и межсервисного взаимодействия;
-- saga-like сценарий перевода денег с компенсацией при сбоях;
+- saga сценарий перевода денег с компенсацией при сбоях;
 - transactional outbox в `transfer` для надежной асинхронной доставки событий и recovery-процессов;
 - Kafka, Resilience4j, Prometheus, Grafana, Zipkin, ELK, Helm и Kubernetes.
 
@@ -43,7 +43,7 @@ Java / Spring backend engineer. Проектирую и разрабатываю
 - в более поздних ветках архитектура была усилена Kafka-интеграциями, security, observability и k8s-инфраструктурой.
 
 ### [my-market-app](https://github.com/LinnikDanil/my-market-app)
-Реактивный интернет-магазин на Spring WebFlux, где акцент сделан на user-facing backend, security и интеграцию с платежным сервисом.
+Реактивный интернет-магазин на Spring WebFlux, где акцент сделан на web backend, security и интеграцию с платежным сервисом.
 
 Что внутри:
 - `market` как реактивная витрина, корзина, заказы, регистрация и авторизация пользователей;
@@ -52,7 +52,7 @@ Java / Spring backend engineer. Проектирую и разрабатываю
 - Redis caching, R2DBC + PostgreSQL, OpenAPI-generated client;
 - компенсационный flow для заказа: hold платежа, сохранение заказа, confirm/cancel в зависимости от результата.
 
-Этот проект хорошо показывает, что я уверенно работаю не только с привычным Spring MVC, но и с reactive-стеком и нефункциональными требованиями вокруг него.
+Этот проект хорошо показывает, что я уверенно работаю не только с привычным Spring MVC, но и с reactive стеком и нефункциональными требованиями вокруг него.
 
 ### [my-blog-back-app](https://github.com/LinnikDanil/my-blog-back-app)
 Компактный backend-монолит, который хорошо демонстрирует инженерную дисциплину на базовом уровне архитектуры приложения.
@@ -68,7 +68,7 @@ Java / Spring backend engineer. Проектирую и разрабатываю
 ## Что можно понять по этим проектам
 
 - Я умею самостоятельно проектировать систему от доменной модели до инфраструктуры запуска.
-- Мне комфортно и в монолите, и в микросервисной архитектуре, и в reactive-приложениях.
+- Мне комфортно и в монолите, и в микросервисной архитектуре, и в реактивных приложениях.
 - Я думаю не только про "чтобы работало", но и про эксплуатацию, деградацию, диагностику и развитие системы.
 
 ## Contact me
