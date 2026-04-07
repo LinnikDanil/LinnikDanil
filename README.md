@@ -1,30 +1,75 @@
-![Описание](https://github.com/LinnikDanil/LinnikDanil/blob/main/header.png?raw=true)
-## My stack
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) 
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-## Tools
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)
+# Danil Linnik
 
+Java / Spring backend engineer. Проектирую и разрабатываю backend-системы, в которых важны не только бизнес-функции, но и надежность интеграций, безопасность, наблюдаемость, тестируемость и удобство эксплуатации.
 
-## About me
-I'm currently working on Java. I like Java and especially Spring.
+## Чем я занимаюсь
 
-| 💻 **Technology** | 🚀 **Projects** |
-| - | - |
-| Java 11 (Core, Stream), Spring Boot, Hibernate, PostgreSQL, Maven, Lombok, Junit5, Mockito, Postman, Docker| [![Explore-With-Me](https://img.shields.io/static/v1?label=&message=Explore-With-Me&color=000605&logo=github&logoColor=FFFFFF&labelColor=000605)](https://github.com/LinnikDanil/java-explore-with-me) |
-| Spring, MVN, SQL, PostgreSQL, ORM Hibernate JPA, MockMvc, Docker, H2 SQL, REST | [![Shareit](https://img.shields.io/static/v1?label=&message=ShareIt&color=000605&logo=github&logoColor=FFFFFF&labelColor=000605)](https://github.com/LinnikDanil/java-shareit) |
-| "*Групповая разработка*" Spring Boot, MVN, SQL, H2, JDBC, REST | [![Filmorate](https://img.shields.io/static/v1?label=&message=Filmorate&color=000605&logo=github&logoColor=FFFFFF&labelColor=000605)](https://github.com/sigmaclap/java-filmorate) |
-| HTTP, JSON, Java Core, Unit-тесты Rest-Client, KVServer | [![Kanban](https://img.shields.io/static/v1?label=&message=Kanban&color=000605&logo=github&logoColor=FFFFFF&labelColor=000605)](https://github.com/LinnikDanil/java-kanban) |
+- Проектирую сервисные границы, API и взаимодействие между модулями и микросервисами.
+- Собираю production-oriented backend: security, observability, retries, compensation flows, logging, metrics, tracing, alerting.
+- Довожу систему до рабочего окружения: Docker, Kubernetes, Helm, инфраструктурные конфиги, локальный и стендовый запуск.
+- Работаю как с классическим synchronous REST, так и с event-driven и reactive-подходами.
 
-| <a href="https://github.com/LinnikDanil/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=LinnikDanil&show_icons=true&include_all_commits=true&theme=dracula&hide_border=true" alt="LinnikDanil's github stats" /></a> |[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LinnikDanil&layout=compact&theme=dracula)](https://github.com/LinnikDanil/github-readme-stats) |
-| ------------- | ------------- |
+## Основной стек
+
+- Java 21-25, Spring Boot, Spring MVC, Spring WebFlux
+- Spring Security, OAuth2/OIDC, Keycloak
+- Spring Data JPA, Hibernate, JDBC, R2DBC, PostgreSQL, Redis, Liquibase
+- Kafka, Resilience4j, OpenAPI Generator, Testcontainers
+- Docker, Kubernetes, Helm, Prometheus, Grafana, Zipkin, ELK
+
+## Архитектурный подход
+
+- Контрактное взаимодействие между сервисами через OpenAPI и generated clients
+- Надежные интеграции через retries, circuit breaker и явную обработку ошибок внешних сервисов
+- Компенсационные сценарии для распределенных операций: outbox, saga-like orchestration, async recovery
+- Security-first подход: разграничение прав, JWT/OAuth2, machine-to-machine интеграции, защита UI и API
+- Наблюдаемость как часть архитектуры: structured logs, tracing, business metrics, dashboards, alerts
+- Осмысленная тестовая стратегия: unit, slice, integration, security и container-based тесты
+
+## Избранные проекты
+
+### [my-bank-app](https://github.com/LinnikDanil/my-bank-app)
+Микросервисный banking-проект, который показывает мой подход к проектированию сложных систем целиком, а не только отдельных CRUD-сервисов.
+
+Что внутри:
+- отдельные сервисы `account`, `cash`, `transfer`, `notification`, `front` и общая библиотека `common`;
+- OAuth2/OIDC через Keycloak для пользовательского и межсервисного взаимодействия;
+- saga-like сценарий перевода денег с компенсацией при сбоях;
+- transactional outbox в `transfer` для надежной асинхронной доставки событий и recovery-процессов;
+- Kafka, Resilience4j, Prometheus, Grafana, Zipkin, ELK, Helm и Kubernetes.
+
+Отдельно важно:
+- в ветке `module_3_sprint_9` проект развивался со `Spring Cloud`, `gateway` и `Consul Discovery / Config`;
+- в более поздних ветках архитектура была усилена Kafka-интеграциями, security, observability и k8s-инфраструктурой.
+
+### [my-market-app](https://github.com/LinnikDanil/my-market-app)
+Реактивный интернет-магазин на Spring WebFlux, где акцент сделан на user-facing backend, security и интеграцию с платежным сервисом.
+
+Что внутри:
+- `market` как реактивная витрина, корзина, заказы, регистрация и авторизация пользователей;
+- `payments` как отдельный сервис платежей;
+- form login, роли, CSRF, logout-handling и OAuth2 `client_credentials` между сервисами через Keycloak;
+- Redis caching, R2DBC + PostgreSQL, OpenAPI-generated client;
+- компенсационный flow для заказа: hold платежа, сохранение заказа, confirm/cancel в зависимости от результата.
+
+Этот проект хорошо показывает, что я уверенно работаю не только с привычным Spring MVC, но и с reactive-стеком и нефункциональными требованиями вокруг него.
+
+### [my-blog-back-app](https://github.com/LinnikDanil/my-blog-back-app)
+Компактный backend-монолит, который хорошо демонстрирует инженерную дисциплину на базовом уровне архитектуры приложения.
+
+Что внутри:
+- REST API для постов, комментариев, лайков, изображений и тегов;
+- Spring MVC + Spring Data JDBC + PostgreSQL;
+- явный SQL-слой, pagination/search, централизованная обработка ошибок, CORS и логирование;
+- unit-, controller-, repository- и integration-тесты с Testcontainers.
+
+Этот проект меньше по масштабу, но отлично показывает, что даже без микросервисов я строю код предсказуемо: с понятными слоями, аккуратной работой с БД и нормальной тестовой стратегией.
+
+## Что можно понять по этим проектам
+
+- Я умею самостоятельно проектировать систему от доменной модели до инфраструктуры запуска.
+- Мне комфортно и в монолите, и в микросервисной архитектуре, и в reactive-приложениях.
+- Я думаю не только про "чтобы работало", но и про эксплуатацию, деградацию, диагностику и развитие системы.
 
 ## Contact me
 [![Telegram](https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Danil_Linnik) 
